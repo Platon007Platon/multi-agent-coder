@@ -25,7 +25,7 @@ graph TD
 🚀 Çalıştırma Adımları (Getting Started)
 1. Repoyu Klonlayın
 Bash
-git clone [https://github.com/KULLANICI_ADIN/REPOSUN_ADI.git](https://github.com/KULLANICI_ADIN/REPOSUN_ADI.git)
+git clone https://github.com/KULLANICI_ADIN/REPOSUN_ADI.git
 cd REPOSUN_ADI
 2. Sanal Ortam (Virtual Environment) Oluşturun
 Bash
@@ -35,7 +35,7 @@ venv\Scripts\activate
 # macOS / Linux için:
 source venv/bin/activate
 3. Bağımlılıkları Yükleyin
-Proje dizininde bir requirements.txt oluşturarak gerekli kütüphaneleri yükleyin:
+Proje dizininde gerekli kütüphaneleri yükleyin:
 
 Bash
 pip install streamlit langchain-core langchain-google-genai langchain-chroma langgraph python-dotenv
