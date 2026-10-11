@@ -22,3 +22,42 @@ graph TD
     E --> C
     D -- Başarılı --> F[Refactor Agent: PEP-8 & Type Hints]
     F --> G[Nihai Python Kodu]
+🚀 Çalıştırma Adımları (Getting Started)
+1. Repoyu Klonlayın
+Bash
+git clone [https://github.com/KULLANICI_ADIN/REPOSUN_ADI.git](https://github.com/KULLANICI_ADIN/REPOSUN_ADI.git)
+cd REPOSUN_ADI
+2. Sanal Ortam (Virtual Environment) Oluşturun
+Bash
+python -m venv venv
+# Windows için:
+venv\Scripts\activate
+# macOS / Linux için:
+source venv/bin/activate
+3. Bağımlılıkları Yükleyin
+Proje dizininde bir requirements.txt oluşturarak gerekli kütüphaneleri yükleyin:
+
+Bash
+pip install streamlit langchain-core langchain-google-genai langchain-chroma langgraph python-dotenv
+4. Çevre Değişkenlerini (.env) Ayarlayın
+Projenin ana dizininde bir .env dosyası oluşturun ve Gemini API anahtarınızı ekleyin:
+
+Code snippet
+GOOGLE_API_KEY=senin_gemini_api_anahtarin_buraya
+5. Uygulamayı Başlatın
+Streamlit Web Arayüzü ile:
+
+Bash
+streamlit run app.py
+Terminal (CLI) Modunda:
+
+Bash
+python Multi_agents_fixed.py
+🛠️ Kullanılan Teknolojiler
+Orkestrasyon: LangGraph, LangChain
+
+Yapay Zeka: Google Gemini API (gemini-1.5-flash)
+
+Vektör Veritabanı: ChromaDB (RAG Error Memory)
+
+Arayüz: Streamlit
