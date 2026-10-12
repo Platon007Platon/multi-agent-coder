@@ -5,44 +5,39 @@
 [![Gemini API](https://img.shields.io/badge/Gemini%20API-Flash-green)](https://ai.google.dev/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Interactive%20UI-FF4B4B)](https://streamlit.io/)
 
-Otonom kod üretimi, izole bir sandbox ortamında güvenli kod doğrulaması ve kendi kendini düzelten (self-healing) RAG hafızası içeren döngüsel çoklu-ajan (multi-agent) Python geliştirme sistemi.
+A cyclic multi-agent Python development system featuring autonomous code generation, secure code verification in an isolated sandbox environment, and self-healing RAG memory.
 
----
+## 🏗️ Architecture & Workflow
 
-## 🏗️ Mimari ve İşleyiş (Architecture Diagram)
+The system consists of 4 autonomous agents interconnected using LangGraph. If the code fails during the testing phase, past error logs and resolution patterns are retrieved from ChromaDB and fed back to the Coder agent to iteratively fix the code.
 
-Sistem, LangGraph kullanılarak birbirine bağlı 4 otonom ajandan oluşur. Kod test aşamasında hata verirse, ChromaDB üzerinden geçmiş hata tecrübeleri çekilerek Coder ajanına geri beslenir.
+## 🚀 Getting Started
 
----
+1. Clone the Repository
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+cd YOUR_REPOSITORY_NAME
 
-## 🚀 Çalıştırma Adımları (Getting Started)
-
-### 1. Repoyu Klonlayın
-git clone https://github.com/KULLANICI_ADIN/REPOSUN_ADI.git
-cd REPOSUN_ADI
-
-### 2. Sanal Ortam (Virtual Environment) Oluşturun
+2. Create a Virtual Environment
 python -m venv venv
-# Windows için:
+# On Windows:
 venv\Scripts\activate
-# macOS / Linux için:
+# On macOS / Linux:
 source venv/bin/activate
 
-### 3. Bağımlılıkları Yükleyin
+3. Install Dependencies
 pip install streamlit langchain-core langchain-google-genai langchain-chroma langgraph python-dotenv
 
-### 4. Çevre Değişkenlerini (.env) Ayarlayın
-Projenin ana dizininde bir .env dosyası oluşturun ve Gemini API anahtarınızı ekleyin:
-GOOGLE_API_KEY=senin_gemini_api_anahtarin_buraya
+4. Set Up Environment Variables (.env)
+Create a .env file in the root directory and add your Google Gemini API key:
+GOOGLE_API_KEY=your_gemini_api_key_here
 
-### 5. Uygulamayı Başlatın
-- Streamlit Web Arayüzü ile: streamlit run app.py
-- Terminal (CLI) Modunda: python Multi_agents_fixed.py
+5. Run the Application
+* Via Streamlit Web Interface: streamlit run app.py
+* Via Terminal (CLI) Mode: python Multi_agents_fixed.py
 
----
+## 🛠️ Tech Stack
 
-## 🛠️ Kullanılan Teknolojiler
-- Orkestrasyon: LangGraph, LangChain
-- Yapay Zeka: Google Gemini API (gemini-1.5-flash)
-- Vektör Veritabanı: ChromaDB (RAG Error Memory)
-- Arayüz: Streamlit
+* Orchestration: LangGraph, LangChain
+* Artificial Intelligence: Google Gemini API (gemini-1.5-flash)
+* Vector Database: ChromaDB (RAG Error Memory)
+* Frontend / UI: Streamlit
